@@ -1,13 +1,76 @@
 // 1. Given a string with the value of a day of the week, return the number that that day is in the week. A second argument will be provided to determine if should start week on Monday if true, else Sunday if false. If the string is not a day of the week but is bad input, then return the string 'That's not a day of the week'.
 // Example: 
-    // input: 'Sunday', false
-    // output: 1
+// input: 'Sunday', false
+// output: 1
 //Example:
-    // input: 'Sunday', true
-    // output: 7
+// input: 'Sunday', true
+// output: 7
 
 function daysPosition(day, offset) {
-
+  if (offset == true) {
+    switch (new Date().getDay()) {
+      case 1:
+        day = "Monday"
+        return 1
+        break
+      case 2:
+        day = "Tuesday"
+        return 2
+        break
+      case 3:
+        day = "Wednesday"
+        return 3
+        break
+      case 4:
+        day = "Thursday"
+        return 4
+        break
+      case 5:
+        day = "Friday"
+        return 5
+        break
+      case 6:
+        day = "Saturday"
+        return 6
+        break
+      case 7:
+        day = "Sunday"
+        return 7
+        break
+    }
+  }
+  else {
+    switch (new Date().getDay()) {
+      case 1:
+        day = "Sunday"
+        return 1
+        break
+      case 2:
+        day = "Monday"
+        return 2
+        break
+      case 3:
+        day = "Tuesday"
+        return 3
+        break
+      case 4:
+        day = "Wednesday"
+        return 4
+        break
+      case 5:
+        day = "Thursday"
+        return 5
+        break
+      case 6:
+        day = "Friday"
+        return 6
+        break
+      case 7:
+        day = "Saturday"
+        return 7
+        break
+    }
+  }
 }
 
 
@@ -26,10 +89,10 @@ function daysPosition(day, offset) {
  *            >= +3     |   "Ouch"
  */
 
- function golfScore(score, par) {
+function golfScore(score, par) {
 
- }
- 
+}
+
 
 // --------------------------------------------
 
@@ -45,9 +108,9 @@ function daysPosition(day, offset) {
  */
 // Write a card counting function that will receive a card. The function will increment or decrement the global count variable according to the card's value (see table above). The function will then return the current count and the string "Bet" if the count is positive, or "Hold" if the count is zero or negative.
 // Example:
-    // output: '-5 Hold'
+// output: '-5 Hold'
 // Example:
-    // output: '2 Bet'
+// output: '2 Bet'
 
 let count = 0
 
